@@ -1,3 +1,5 @@
+const moment = require('moment');
+moment.locale('zh-CN');
 module.exports = {
     title: 'Hello VuePress',
     description: 'Just playing around',
@@ -6,6 +8,16 @@ module.exports = {
           lang: 'zh-CN'
         }
     },
+    plugins: [
+        [
+          '@vuepress/last-updated',
+          {
+            transformer: (timestamp) => {
+              return moment(timestamp).format('LLLL')
+            }
+          }
+        ]
+    ],
     themeConfig: {
         lastUpdated: '最后更新时间',
         logo: '/assets/img/1.jpg',
@@ -29,15 +41,8 @@ module.exports = {
                 ]
             },
             {
-                 text: 'External', link: 'https://google.com' },
-            {
-                text: 'Languages',
-                ariaLabel: 'Language Menu',
-                items: [
-                  { text: 'Chinese', link: '/language/chinese/' },
-                  { text: 'Japanese', link: '/language/japanese/' }
-                ]
-            }
+                 text: 'External', link: 'https://google.com' 
+            },
         ],
         sidebar: {
             '/js/': [
