@@ -1,8 +1,19 @@
+/*
+ * @Author: your name
+ * @Date: 2020-04-03 09:09:37
+ * @LastEditTime: 2020-05-09 23:24:55
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \document\docs\.vuepress\config.js
+ */
 const moment = require('moment');
 moment.locale('zh-CN');
 module.exports = {
-    title: 'Hello VuePress',
-    description: 'Just playing around',
+    head: [
+        ['link', { rel: 'icon', href: '/favicon.ico' }]
+    ],
+    title: '罗湖',
+    description: '不如意事常八九，可与言者无二三',
     locales: {
         '/': {
           lang: 'zh-CN'
@@ -20,60 +31,13 @@ module.exports = {
     ],
     themeConfig: {
         lastUpdated: '最后更新时间',
-        logo: '/assets/img/1.jpg',
+        logo: '/assets/img/profile.png',
         repo: 'lanbling/document',
         repoLabel: '查看源码',
         editLinks: true,
         editLinkText: '帮助我们改善此页面！',
         docsDir: 'docs',
-        nav: [
-            {text:'首页', link: '/'},
-            {text: 'js', link: '/js/'},
-            {text: 'css', link: '/css/' },
-            {text: 'html', link: '/html/' },
-            {text: 'node', link: '/node/' },
-            {   
-                text: '设计模式', 
-                items: [
-                    { text: '基础知识', link: '/pattern/basic/' },
-                    { text: '设计模式', link: '/pattern/core/' },
-                    { text: '设计原则与编程技巧', link: '/pattern/skill/' }
-                ]
-            },
-            {
-                 text: 'External', link: 'https://google.com' 
-            },
-        ],
-        sidebar: {
-            '/js/': [
-                {
-                    title: 'vue学习指南',
-                    collapsable: true,
-                    children: [
-                        '/js/vue/原型链',
-                        '/js/vue/this指针'
-                    ]
-                },
-                {
-                    title: 'lodash源码分析',
-                    collapsable: true,
-                    children: [
-                        '/js/lodash/'
-                    ]
-                }
-            ],
-            '/pattern/': [
-                {
-                    title: '基础知识',
-                    path: '/pattern/basic',
-                    collapsable: true,
-                    children: [
-                        '/pattern/basic/面向对象的Javascript',
-                        '/pattern/basic/闭包和高阶函数',
-                        '/pattern/basic/this、call和apply',
-                    ]
-                }
-            ]
-        }
+        nav: require('./nav'),
+        sidebar: require('./sidebar')
     }
 }

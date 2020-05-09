@@ -1,16 +1,16 @@
 ---
 home: true
 heroImage: null
-heroText: Hero 标题
-tagline: Hero 副标题
-actionText: 快速上手 →
-actionLink: /zh/guide/
+heroText: 不忘初心，方得始终
+tagline: null
+# actionText: 快速上手 →
+# actionLink: /zh/guide/
 features:
-- title: 简洁至上
-  details: 以 Markdown 为中心的项目结构，以最少的配置帮助你专注于写作。
-- title: Vue驱动
-  details: 享受 Vue + webpack 的开发体验，在 Markdown 中使用 Vue 组件，同时可以使用 Vue 来开发自定义主题。
-- title: 高性能
-  details: VuePress 为每个页面预渲染生成静态的 HTML，同时在页面被加载的时候，将作为 SPA 运行。
-footer: MIT Licensed | Copyright © 2018-present Evan You111
+- title: 说努力
+  details: 最痛苦的事，不是失败，是我本可以。
+- title:  说学艺
+  details: 种一棵树最好的时间是十年前，其次是现在。
+- title:  说心态
+  details: 觉得为时已晚，恰恰是最早的时候
+# footer: MIT Licensed | Copyright © 2018-present Evan You111
 ---
