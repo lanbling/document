@@ -1,5 +1,0 @@
-# lodash #
-
-## lodash ##
-
-### lodash ######
