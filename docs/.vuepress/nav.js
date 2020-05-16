@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-05-09 22:52:08
- * @LastEditTime: 2020-05-09 23:38:44
+ * @LastEditTime: 2020-05-13 08:59:11
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \document\docs\.vuepress\nav.js
@@ -19,7 +19,6 @@ module.exports = [
             { text: '设计原则与编程技巧', link: '/pattern/skill/' }
         ]
     },
-    // {
-    //      text: 'External', link: 'https://google.com' 
-    // },
+    {text: '修身', link: '/progress/'},
+    {text: '职业', link: '/career/'},
 ]

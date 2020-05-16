@@ -1,5 +1,7 @@
 # MVVM框架类
 
+[TOC]
+
 
 
 ## 引言
@@ -69,9 +71,19 @@
 
 ### mvp：
 
+PM模，展示模型
+
+![](http://image.lanbling.com/md/mvp.webp)
+
 
 
 ### mvvm：
+
+视图模型，其实就是PM模式中的展示模型
+
+视图和视图行进行了绑定
+
+总结：无论是MVVM还是Presentation Model，其中重要的不是如何同步视图和展示模型/视图模型的状态，也不是使用观察者模式、双向绑定还是其它机制。**最为关键的点是，展示模型/视图模型创建了一个视图的抽象，将视图中的状态和行为抽离出一个新的抽象。**
 
 ![](http://image.lanbling.com/md/1975281-0f927ea02175ea30.webp)
 
@@ -81,3 +93,83 @@
 
 [参考链接]: https://www.jianshu.com/p/ebd2c5914d20
 
+
+
+## 双向绑定的原理
+
+### 概念：
+
+![image-20200511124103898](http://image.lanbling.com/md/image-20200511124103898.png)
+
+正向：数据驱动页面，没有这个之前，模板的方式把数据渲染在模板中，如php。
+
+反向：之前的做法，绑定事件，例如change、input事件。
+
+绑定：自动化处理，框架帮忙处理好的
+
+### 原理：
+
+![image-20200513081813305](http://image.lanbling.com/md/image-20200513081813305.png)
+
+Object.defineProperty：
+
+[定义]: https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty
+
+#### 提几点要求：
+
+1. Object.definePeoperty的用法要熟记于心
+2. Object.defindProperty与reflect.defineProperty的区别（返回值）
+3. Object.defineProperty要会手写
+
+```html
+configurable为false时，除了将writable改为false， 的单向过程。就不能任何修改了，这是一个不可逆的过程。
+value默认值为undefined
+拥有布尔值的键configurable、enumerable、writable的默认值都是false；
+属性值和函数的键value、get和set字段的默认值为undefined；
+
+```
+
+![48125d0ad237aaf0b83f98d1d40fca8](http://image.lanbling.com/md/48125d0ad237aaf0b83f98d1d40fca8.png)
+
+**数据描述符有四个，存储描述符有四个，二者都有的是enumrable和configurable。如果设置一个属性，同时包含这两种，则会报错**
+
+```js
+var o = {};
+o.a = 1;
+等同于
+Object.defineProperty(o, 'a', {
+    value: 1,
+    configurable: true,
+    enumerable: true,
+    writable: true
+});
+```
+
+value叫做访问者属性
+
+
+
+## 设计模式
+
+
+
+![055565ced6407d4aece606cffae1790](http://image.lanbling.com/md/055565ced6407d4aece606cffae1790.png)
+
+1. 观察者设计模式的原理要了如指掌
+2. 最好能写出设计模式的伪代码
+
+
+
+## 生命周期
+
+- 熟记对应的几个节点
+- 熟记每个节点触发的时机
+- 做好多演练一下
+
+![](http://image.lanbling.com/md/lifecycle.png)
+
+
+
+## 源码分析
+
+  

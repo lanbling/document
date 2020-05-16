@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-05-09 22:28:26
- * @LastEditTime: 2020-05-12 23:48:48
+ * @LastEditTime: 2020-05-16 09:05:37
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \document\docs\js\sidebar.js
@@ -36,6 +36,7 @@ module.exports = [
         collapsable: true,
         children: [
             '/js/手写代码/防抖',
+            '/js/手写代码/节流',
         ]
     }
 ]
