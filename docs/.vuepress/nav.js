@@ -7,18 +7,25 @@
  * @FilePath: \document\docs\.vuepress\nav.js
  */
 module.exports = [
-    {text:'首页', link: '/'},
-    {text: 'js', link: '/js/'},
-    {text: 'css', link: '/css/' },
-    {text: 'node', link: '/node/' },
-    {   
-        text: '设计模式', 
+    { text: '首页', link: '/' },
+    { text: 'js', link: '/js/' },
+    { text: 'css', link: '/css/' },
+    { text: 'node', link: '/node/' },
+    {
+        text: '开发经验',
+        items: [
+            { text: '工具', link: '/experience/tool/' },
+            { text: '异常', link: '/experience/exception/' }
+        ]
+    },
+    {
+        text: '设计模式',
         items: [
             { text: '基础知识', link: '/pattern/basic/' },
             { text: '设计模式', link: '/pattern/core/' },
             { text: '设计原则与编程技巧', link: '/pattern/skill/' }
         ]
     },
-    {text: '修身', link: '/progress/'},
-    {text: '职业', link: '/career/'},
+    { text: '修身', link: '/progress/' },
+    { text: '职业', link: '/career/' },
 ]

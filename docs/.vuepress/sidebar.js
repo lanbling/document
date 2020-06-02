@@ -12,5 +12,6 @@ module.exports = {
     '/node/': require('../node/sidebar'),
     '/pattern/': require('../pattern/sidebar'),
     '/progress/': require('../progress/sidebar'),
-    '/career/': require('../career/sidebar')
+    '/career/': require('../career/sidebar'),
+    '/experience/': require('../experience/sidebar')
 }
