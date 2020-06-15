@@ -12,9 +12,7 @@ module.exports = [
         path: '/pattern/basic',
         collapsable: true,
         children: [
-            '/pattern/basic/面向对象的Javascript',
-            '/pattern/basic/闭包和高阶函数',
-            '/pattern/basic/this、call和apply',
+            
         ]
     }
 ]

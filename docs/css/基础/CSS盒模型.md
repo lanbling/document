@@ -26,7 +26,7 @@ box-sizing:border-box;  IE模型
 ## JS如何设置获取盒模型对应的宽和高
 
 ```js
-dom.style.width/height：只能取到内联样式的狂高，link引入的读不到
+dom.style.width/height：只能取到内联样式的宽高，link引入的读不到
 是否能取到所有元素的宽高？
 dom.currentStyle.width/height  渲染以后的样式，只有IE支持
 window.getComputedStyle(dom).width/height  兼容性佳
@@ -42,7 +42,7 @@ dom.getBoundingClientRect().width/height
 
  
 
-## BFC（边距重叠解决方案）
+## BFC（边距重叠解决方案 Block Formatting Context）
 
 块级格式化上下文    IFC：内联格式化上下文
 
