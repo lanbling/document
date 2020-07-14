@@ -64,7 +64,7 @@ document.documentElement
 - event.target
   当前被点击的节点。
 
-在早期的ie版本中不吃吃event.target，用soucreTarget
+在早期的ie版本中不支持event.target，用soucreTarget
 
 
 

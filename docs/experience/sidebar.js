@@ -25,4 +25,15 @@ module.exports = [
             '/experience/engineering/webpack进阶',
         ]
     },
+    {
+        title: '优化',
+        path: '/experience/optimize',
+        collapsable: true,
+        children: [
+            '/experience/optimize/小程序性能优化',
+            '/experience/optimize/H5视频播放踩坑',
+            '/experience/optimize/SEO',
+            '/experience/optimize/Vue项目优化打包体积和首屏加载',
+        ]
+    },
 ]

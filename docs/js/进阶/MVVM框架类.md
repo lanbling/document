@@ -163,7 +163,7 @@ value叫做访问者属性
 ## 生命周期
 
 - 熟记对应的几个节点
-- 熟记每个节点触发的时机
+- 熟记每个节点触发的时机 
 - 做好多演练一下
 
 ![](http://image.lanbling.com/md/lifecycle.png)
@@ -172,4 +172,4 @@ value叫做访问者属性
 
 ## 源码分析
 
-  
+  [一张思维导图辅助你深入了解 Vue | Vue-Router | Vuex 源码架构 #27](https://github.com/biaochenxuying/blog/issues/27#)

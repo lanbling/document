@@ -16,7 +16,8 @@ module.exports = [
         items: [
             { text: '工具', link: '/experience/tool/' },
             { text: '异常', link: '/experience/exception/' },
-            { text: '工程化', link: '/experience/engineering/' }
+            { text: '工程化', link: '/experience/engineering/' },
+            { text: '优化', link: '/experience/optimize/' }
         ]
     },
     {

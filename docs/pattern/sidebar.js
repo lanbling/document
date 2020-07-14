@@ -12,7 +12,7 @@ module.exports = [
         path: '/pattern/basic',
         collapsable: true,
         children: [
-            
+            '/pattern/basic/test',
         ]
     }
 ]
