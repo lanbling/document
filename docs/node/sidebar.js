@@ -8,12 +8,27 @@
  */
 module.exports = [
     {
+        title: '企业化标准的开发环境搭建',
+        collapsable: false,
+        children: [
+            '/node/企业化标准的开发环境/前端工程化',
+            '/node/企业化标准的开发环境/虚拟机安装centos细节',
+            '/node/企业化标准的开发环境/Docker服务',
+            '/node/企业化标准的开发环境/centos配置ssh服务',
+            '/node/企业化标准的开发环境/真机联调总结',
+            '/node/企业化标准的开发环境/重学webpack',
+            '/node/企业化标准的开发环境/Mock数据',
+            '/node/企业化标准的开发环境/webstorm与vscode',
+            '/node/企业化标准的开发环境/设置淘宝镜像',
+            '/node/企业化标准的开发环境/gulp开发流程',
+            '/node/企业化标准的开发环境/配置自己的脚手架',
+        ]
+    },
+    {
         title: '基础',
         collapsable: false,
         children: [
-            '/node/基础/企业标准的开发环境搭建',
-            '/node/基础/虚拟机安装centos细节',
-            '/node/基础/Docker服务',
+            
         ]
     },
     {
