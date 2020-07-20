@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>MVVM框架类 | 罗湖</title>
+    <meta name="description" content="不如意事常八九，可与言者无二三">
+    <meta name="generator" content="VuePress 1.4.0">
+    <link rel="icon" href="/favicon.ico">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.2/jquery.fancybox.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.2/jquery.fancybox.min.css">
+    
+    <link rel="preload" href="/assets/css/0.styles.2a8ad169.css" as="style"><link rel="preload" href="/assets/js/app.7432f3e5.js" as="script"><link rel="preload" href="/assets/js/2.5aced2d4.js" as="script"><link rel="preload" href="/assets/js/43.44c5242f.js" as="script"><link rel="prefetch" href="/assets/js/10.ad3ba127.js"><link rel="prefetch" href="/assets/js/11.e9d40382.js"><link rel="prefetch" href="/assets/js/12.c895aa41.js"><link rel="prefetch" href="/assets/js/13.d94d6e78.js"><link rel="prefetch" href="/assets/js/14.5b7e352e.js"><link rel="prefetch" href="/assets/js/15.541c6e8a.js"><link rel="prefetch" href="/assets/js/16.32c2d9b5.js"><link rel="prefetch" href="/assets/js/17.7a92153c.js"><link rel="prefetch" href="/assets/js/18.444ff785.js"><link rel="prefetch" href="/assets/js/19.c3f37e80.js"><link rel="prefetch" href="/assets/js/20.e16c3ba3.js"><link rel="prefetch" href="/assets/js/21.9ddfd863.js"><link rel="prefetch" href="/assets/js/22.961432bc.js"><link rel="prefetch" href="/assets/js/23.27fdba8d.js"><link rel="prefetch" href="/assets/js/24.97447734.js"><link rel="prefetch" href="/assets/js/25.39c264e0.js"><link rel="prefetch" href="/assets/js/26.6a36b440.js"><link rel="prefetch" href="/assets/js/27.2a3cfa74.js"><link rel="prefetch" href="/assets/js/28.bb6fa8ab.js"><link rel="prefetch" href="/assets/js/29.c29c1bab.js"><link rel="prefetch" href="/assets/js/3.6b4fff62.js"><link rel="prefetch" href="/assets/js/30.f0fe177b.js"><link rel="prefetch" href="/assets/js/31.726ce2a1.js"><link rel="prefetch" href="/assets/js/32.c76004bd.js"><link rel="prefetch" href="/assets/js/33.318b7970.js"><link rel="prefetch" href="/assets/js/34.17f63915.js"><link rel="prefetch" href="/assets/js/35.3d6782f1.js"><link rel="prefetch" href="/assets/js/36.a1aee197.js"><link rel="prefetch" href="/assets/js/37.b0c74960.js"><link rel="prefetch" href="/assets/js/38.48bbe4a6.js"><link rel="prefetch" href="/assets/js/39.0cca90a4.js"><link rel="prefetch" href="/assets/js/4.7a4d83b2.js"><link rel="prefetch" href="/assets/js/40.2bed5538.js"><link rel="prefetch" href="/assets/js/41.adbc1770.js"><link rel="prefetch" href="/assets/js/42.1210e1c5.js"><link rel="prefetch" href="/assets/js/44.08bd0ca2.js"><link rel="prefetch" href="/assets/js/45.2d20f3de.js"><link rel="prefetch" href="/assets/js/46.a294339c.js"><link rel="prefetch" href="/assets/js/47.1ec4fce2.js"><link rel="prefetch" href="/assets/js/48.c0f89a67.js"><link rel="prefetch" href="/assets/js/49.4f8db54b.js"><link rel="prefetch" href="/assets/js/5.6e68c4f5.js"><link rel="prefetch" href="/assets/js/50.15f84966.js"><link rel="prefetch" href="/assets/js/51.ae6081da.js"><link rel="prefetch" href="/assets/js/52.f5fe5324.js"><link rel="prefetch" href="/assets/js/53.db0f30d7.js"><link rel="prefetch" href="/assets/js/54.0093e258.js"><link rel="prefetch" href="/assets/js/55.28c8cfb7.js"><link rel="prefetch" href="/assets/js/56.3648c491.js"><link rel="prefetch" href="/assets/js/57.67064559.js"><link rel="prefetch" href="/assets/js/58.6dda11c1.js"><link rel="prefetch" href="/assets/js/59.5dc6023a.js"><link rel="prefetch" href="/assets/js/6.36295da7.js"><link rel="prefetch" href="/assets/js/60.e58d100a.js"><link rel="prefetch" href="/assets/js/61.d209e777.js"><link rel="prefetch" href="/assets/js/62.32b552f9.js"><link rel="prefetch" href="/assets/js/63.5a9880dc.js"><link rel="prefetch" href="/assets/js/64.a01212d2.js"><link rel="prefetch" href="/assets/js/65.ad2ddb81.js"><link rel="prefetch" href="/assets/js/66.0493200f.js"><link rel="prefetch" href="/assets/js/67.6b094279.js"><link rel="prefetch" href="/assets/js/68.3ade9e58.js"><link rel="prefetch" href="/assets/js/69.3d974bc3.js"><link rel="prefetch" href="/assets/js/7.dd509bad.js"><link rel="prefetch" href="/assets/js/70.bda6a43e.js"><link rel="prefetch" href="/assets/js/71.78d92800.js"><link rel="prefetch" href="/assets/js/72.730c0373.js"><link rel="prefetch" href="/assets/js/73.4a2dd28a.js"><link rel="prefetch" href="/assets/js/8.520393bc.js"><link rel="prefetch" href="/assets/js/9.e4989b40.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.2a8ad169.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/assets/img/profile.png" alt="罗湖" class="logo"> <span class="site-name can-hide">罗湖</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/js/" class="nav-link router-link-active">
+  js
+</a></div><div class="nav-item"><a href="/css/" class="nav-link">
+  css
+</a></div><div class="nav-item"><a href="/node/" class="nav-link">
+  node
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="开发经验" class="dropdown-title"><span class="title">开发经验</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/experience/tool/" class="nav-link">
+  工具
+</a></li><li class="dropdown-item"><!----> <a href="/experience/exception/" class="nav-link">
+  异常
+</a></li><li class="dropdown-item"><!----> <a href="/experience/engineering/" class="nav-link">
+  工程化
+</a></li><li class="dropdown-item"><!----> <a href="/experience/optimize/" class="nav-link">
+  优化
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="设计模式" class="dropdown-title"><span class="title">设计模式</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pattern/basic/" class="nav-link">
+  基础知识
+</a></li><li class="dropdown-item"><!----> <a href="/pattern/core/" class="nav-link">
+  设计模式
+</a></li><li class="dropdown-item"><!----> <a href="/pattern/skill/" class="nav-link">
+  设计原则与编程技巧
+</a></li></ul></div></div><div class="nav-item"><a href="/progress/" class="nav-link">
+  修身
+</a></div><div class="nav-item"><a href="/career/" class="nav-link">
+  职业
+</a></div> <a href="https://github.com/lanbling/document" target="_blank" rel="noopener noreferrer" class="repo-link">
+    查看源码
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/js/" class="nav-link router-link-active">
+  js
+</a></div><div class="nav-item"><a href="/css/" class="nav-link">
+  css
+</a></div><div class="nav-item"><a href="/node/" class="nav-link">
+  node
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="开发经验" class="dropdown-title"><span class="title">开发经验</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/experience/tool/" class="nav-link">
+  工具
+</a></li><li class="dropdown-item"><!----> <a href="/experience/exception/" class="nav-link">
+  异常
+</a></li><li class="dropdown-item"><!----> <a href="/experience/engineering/" class="nav-link">
+  工程化
+</a></li><li class="dropdown-item"><!----> <a href="/experience/optimize/" class="nav-link">
+  优化
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="设计模式" class="dropdown-title"><span class="title">设计模式</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pattern/basic/" class="nav-link">
+  基础知识
+</a></li><li class="dropdown-item"><!----> <a href="/pattern/core/" class="nav-link">
+  设计模式
+</a></li><li class="dropdown-item"><!----> <a href="/pattern/skill/" class="nav-link">
+  设计原则与编程技巧
+</a></li></ul></div></div><div class="nav-item"><a href="/progress/" class="nav-link">
+  修身
+</a></div><div class="nav-item"><a href="/career/" class="nav-link">
+  职业
+</a></div> <a href="https://github.com/lanbling/document" target="_blank" rel="noopener noreferrer" class="repo-link">
+    查看源码
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>基础</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>进阶</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/js/进阶/错误监控类.html" class="sidebar-link">错误监控类</a></li><li><a href="/js/进阶/渲染机制类.html" class="sidebar-link">渲染机制类</a></li><li><a href="/js/进阶/页面性能.html" class="sidebar-link">页面性能类</a></li><li><a href="/js/进阶/js运行机制.html" class="sidebar-link">js运行机制</a></li><li><a href="/js/进阶/MVVM框架类.html" class="active sidebar-link">MVVM框架类</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/js/进阶/MVVM框架类.html#引言" class="sidebar-link">引言</a></li><li class="sidebar-sub-header"><a href="/js/进阶/MVVM框架类.html#了解mvvm框架吗" class="sidebar-link">了解MVVM框架吗</a></li><li class="sidebar-sub-header"><a href="/js/进阶/MVVM框架类.html#谈谈对mvvm的认识" class="sidebar-link">谈谈对MVVM的认识</a></li><li class="sidebar-sub-header"><a href="/js/进阶/MVVM框架类.html#双向绑定的原理" class="sidebar-link">双向绑定的原理</a></li><li class="sidebar-sub-header"><a href="/js/进阶/MVVM框架类.html#设计模式" class="sidebar-link">设计模式</a></li><li class="sidebar-sub-header"><a href="/js/进阶/MVVM框架类.html#生命周期" class="sidebar-link">生命周期</a></li><li class="sidebar-sub-header"><a href="/js/进阶/MVVM框架类.html#源码分析" class="sidebar-link">源码分析</a></li></ul></li><li><a href="/js/进阶/模块化.html" class="sidebar-link">模块化</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>手写代码</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="mvvm框架类"><a href="#mvvm框架类" class="header-anchor">#</a> MVVM框架类</h1> <p>[TOC]</p> <h2 id="引言"><a href="#引言" class="header-anchor">#</a> 引言</h2> <ol><li><p>了解MVVM框架吗？</p></li> <li><p>谈谈你对MVVM的认识？</p></li> <li><p>双向绑定是什么原理，可以写出来吗？</p></li> <li><p>使用了什么设计模式？</p></li> <li><p>生命周期是什么？</p></li> <li><p>有看过源码吗？</p></li></ol> <h2 id="了解mvvm框架吗"><a href="#了解mvvm框架吗" class="header-anchor">#</a> 了解MVVM框架吗</h2> <p>了解Vue.js</p> <h2 id="谈谈对mvvm的认识"><a href="#谈谈对mvvm的认识" class="header-anchor">#</a> 谈谈对MVVM的认识</h2> <h3 id="基本概念："><a href="#基本概念：" class="header-anchor">#</a> 基本概念：</h3> <ol><li>先聊MVC</li> <li>聊聊MVVM的定义</li></ol> <p><img src="http://image.lanbling.com/md/image-20200511114046091.png" alt="image-20200511114046091"></p> <h6 id="注意事项："><a href="#注意事项：" class="header-anchor">#</a> 注意事项：</h6> <p>聊聊MVC，彰显知识面涉猎较多；</p> <p>把mvvm的定义说清楚，表达概念理解到位；</p> <p>对比mvvm和mvc；</p> <h3 id="mvc："><a href="#mvc：" class="header-anchor">#</a> mvc：</h3> <p><img src="http://image.lanbling.com/md/9051543-953903112d35c46f.webp" alt=""></p> <h6 id="mvc的变形："><a href="#mvc的变形：" class="header-anchor">#</a> mvc的变形：</h6> <p><img src="http://image.lanbling.com/md/1975281-833880b92e745a8a.webp" alt="图2"></p> <p>图2更符合我的理解（tp5中的mvp），Vide和Model是解耦的，二者通过控制器进行连接</p> <ul><li><p>View（视图）</p> <p>用户看到并与之交互的界面；</p></li> <li><p>Model（模型）</p> <p>主要是和数据库打交道</p></li> <li><p>Controller（控制器）</p> <p>接收用户的输入并调用模型和视图去完成用户的需求</p></li></ul> <h3 id="mvp："><a href="#mvp：" class="header-anchor">#</a> mvp：</h3> <p>PM模，展示模型</p> <p><img src="http://image.lanbling.com/md/mvp.webp" alt=""></p> <h3 id="mvvm："><a href="#mvvm：" class="header-anchor">#</a> mvvm：</h3> <p>视图模型，其实就是PM模式中的展示模型</p> <p>视图和视图行进行了绑定</p> <p>总结：无论是MVVM还是Presentation Model，其中重要的不是如何同步视图和展示模型/视图模型的状态，也不是使用观察者模式、双向绑定还是其它机制。<strong>最为关键的点是，展示模型/视图模型创建了一个视图的抽象，将视图中的状态和行为抽离出一个新的抽象。</strong></p> <p><img src="http://image.lanbling.com/md/1975281-0f927ea02175ea30.webp" alt=""></p> <h3 id="总结："><a href="#总结：" class="header-anchor">#</a> 总结：</h3> <p>各个架构模式的作用就是分离关注，将属于不同模块的功能分散都合适的位置中，同时尽量降低各个模块的相互依赖并且减少需要联系的胶水代码。</p> <h2 id="双向绑定的原理"><a href="#双向绑定的原理" class="header-anchor">#</a> 双向绑定的原理</h2> <h3 id="概念："><a href="#概念：" class="header-anchor">#</a> 概念：</h3> <p><img src="http://image.lanbling.com/md/image-20200511124103898.png" alt="image-20200511124103898"></p> <p>正向：数据驱动页面，没有这个之前，模板的方式把数据渲染在模板中，如php。</p> <p>反向：之前的做法，绑定事件，例如change、input事件。</p> <p>绑定：自动化处理，框架帮忙处理好的</p> <h3 id="原理："><a href="#原理：" class="header-anchor">#</a> 原理：</h3> <p><img src="http://image.lanbling.com/md/image-20200513081813305.png" alt="image-20200513081813305"></p> <p>Object.defineProperty：</p> <h4 id="提几点要求："><a href="#提几点要求：" class="header-anchor">#</a> 提几点要求：</h4> <ol><li>Object.definePeoperty的用法要熟记于心</li> <li>Object.defindProperty与reflect.defineProperty的区别（返回值）</li> <li>Object.defineProperty要会手写</li></ol> <div class="language-html extra-class"><pre class="language-html"><code>configurable为false时，除了将writable改为false， 的单向过程。就不能任何修改了，这是一个不可逆的过程。
+value默认值为undefined
+拥有布尔值的键configurable、enumerable、writable的默认值都是false；
+属性值和函数的键value、get和set字段的默认值为undefined；
+
+</code></pre></div><p><img src="http://image.lanbling.com/md/48125d0ad237aaf0b83f98d1d40fca8.png" alt="48125d0ad237aaf0b83f98d1d40fca8"></p> <p><strong>数据描述符有四个，存储描述符有四个，二者都有的是enumrable和configurable。如果设置一个属性，同时包含这两种，则会报错</strong></p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">var</span> o <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+o<span class="token punctuation">.</span>a <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+等同于
+Object<span class="token punctuation">.</span><span class="token function">defineProperty</span><span class="token punctuation">(</span>o<span class="token punctuation">,</span> <span class="token string">'a'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+    value<span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+    configurable<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    enumerable<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    writable<span class="token operator">:</span> <span class="token boolean">true</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>value叫做访问者属性</p> <h2 id="设计模式"><a href="#设计模式" class="header-anchor">#</a> 设计模式</h2> <p><img src="http://image.lanbling.com/md/055565ced6407d4aece606cffae1790.png" alt="055565ced6407d4aece606cffae1790"></p> <ol><li>观察者设计模式的原理要了如指掌</li> <li>最好能写出设计模式的伪代码</li></ol> <h2 id="生命周期"><a href="#生命周期" class="header-anchor">#</a> 生命周期</h2> <ul><li>熟记对应的几个节点</li> <li>熟记每个节点触发的时机</li> <li>做好多演练一下</li></ul> <p><img src="http://image.lanbling.com/md/lifecycle.png" alt=""></p> <h2 id="源码分析"><a href="#源码分析" class="header-anchor">#</a> 源码分析</h2> <p><a href="https://github.com/biaochenxuying/blog/issues/27#" target="_blank" rel="noopener noreferrer">一张思维导图辅助你深入了解 Vue | Vue-Router | Vuex 源码架构 #27<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/lanbling/document/edit/master/docs/js/进阶/MVVM框架类.md" target="_blank" rel="noopener noreferrer">帮助我们改善此页面！</a> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></div> <div class="last-updated"><span class="prefix">最后更新时间:</span> <span class="time">2020年7月14日星期二下午4点51分</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/js/进阶/js运行机制.html" class="prev">
+        js运行机制
+      </a></span> <span class="next"><a href="/js/进阶/模块化.html">
+        模块化
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.7432f3e5.js" defer></script><script src="/assets/js/2.5aced2d4.js" defer></script><script src="/assets/js/43.44c5242f.js" defer></script>
+  </body>
+</html>

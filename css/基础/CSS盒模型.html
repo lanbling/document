@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>CSS盒模型 | 罗湖</title>
+    <meta name="description" content="不如意事常八九，可与言者无二三">
+    <meta name="generator" content="VuePress 1.4.0">
+    <link rel="icon" href="/favicon.ico">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.2/jquery.fancybox.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.2/jquery.fancybox.min.css">
+    
+    <link rel="preload" href="/assets/css/0.styles.2a8ad169.css" as="style"><link rel="preload" href="/assets/js/app.7432f3e5.js" as="script"><link rel="preload" href="/assets/js/2.5aced2d4.js" as="script"><link rel="preload" href="/assets/js/14.5b7e352e.js" as="script"><link rel="prefetch" href="/assets/js/10.ad3ba127.js"><link rel="prefetch" href="/assets/js/11.e9d40382.js"><link rel="prefetch" href="/assets/js/12.c895aa41.js"><link rel="prefetch" href="/assets/js/13.d94d6e78.js"><link rel="prefetch" href="/assets/js/15.541c6e8a.js"><link rel="prefetch" href="/assets/js/16.32c2d9b5.js"><link rel="prefetch" href="/assets/js/17.7a92153c.js"><link rel="prefetch" href="/assets/js/18.444ff785.js"><link rel="prefetch" href="/assets/js/19.c3f37e80.js"><link rel="prefetch" href="/assets/js/20.e16c3ba3.js"><link rel="prefetch" href="/assets/js/21.9ddfd863.js"><link rel="prefetch" href="/assets/js/22.961432bc.js"><link rel="prefetch" href="/assets/js/23.27fdba8d.js"><link rel="prefetch" href="/assets/js/24.97447734.js"><link rel="prefetch" href="/assets/js/25.39c264e0.js"><link rel="prefetch" href="/assets/js/26.6a36b440.js"><link rel="prefetch" href="/assets/js/27.2a3cfa74.js"><link rel="prefetch" href="/assets/js/28.bb6fa8ab.js"><link rel="prefetch" href="/assets/js/29.c29c1bab.js"><link rel="prefetch" href="/assets/js/3.6b4fff62.js"><link rel="prefetch" href="/assets/js/30.f0fe177b.js"><link rel="prefetch" href="/assets/js/31.726ce2a1.js"><link rel="prefetch" href="/assets/js/32.c76004bd.js"><link rel="prefetch" href="/assets/js/33.318b7970.js"><link rel="prefetch" href="/assets/js/34.17f63915.js"><link rel="prefetch" href="/assets/js/35.3d6782f1.js"><link rel="prefetch" href="/assets/js/36.a1aee197.js"><link rel="prefetch" href="/assets/js/37.b0c74960.js"><link rel="prefetch" href="/assets/js/38.48bbe4a6.js"><link rel="prefetch" href="/assets/js/39.0cca90a4.js"><link rel="prefetch" href="/assets/js/4.7a4d83b2.js"><link rel="prefetch" href="/assets/js/40.2bed5538.js"><link rel="prefetch" href="/assets/js/41.adbc1770.js"><link rel="prefetch" href="/assets/js/42.1210e1c5.js"><link rel="prefetch" href="/assets/js/43.44c5242f.js"><link rel="prefetch" href="/assets/js/44.08bd0ca2.js"><link rel="prefetch" href="/assets/js/45.2d20f3de.js"><link rel="prefetch" href="/assets/js/46.a294339c.js"><link rel="prefetch" href="/assets/js/47.1ec4fce2.js"><link rel="prefetch" href="/assets/js/48.c0f89a67.js"><link rel="prefetch" href="/assets/js/49.4f8db54b.js"><link rel="prefetch" href="/assets/js/5.6e68c4f5.js"><link rel="prefetch" href="/assets/js/50.15f84966.js"><link rel="prefetch" href="/assets/js/51.ae6081da.js"><link rel="prefetch" href="/assets/js/52.f5fe5324.js"><link rel="prefetch" href="/assets/js/53.db0f30d7.js"><link rel="prefetch" href="/assets/js/54.0093e258.js"><link rel="prefetch" href="/assets/js/55.28c8cfb7.js"><link rel="prefetch" href="/assets/js/56.3648c491.js"><link rel="prefetch" href="/assets/js/57.67064559.js"><link rel="prefetch" href="/assets/js/58.6dda11c1.js"><link rel="prefetch" href="/assets/js/59.5dc6023a.js"><link rel="prefetch" href="/assets/js/6.36295da7.js"><link rel="prefetch" href="/assets/js/60.e58d100a.js"><link rel="prefetch" href="/assets/js/61.d209e777.js"><link rel="prefetch" href="/assets/js/62.32b552f9.js"><link rel="prefetch" href="/assets/js/63.5a9880dc.js"><link rel="prefetch" href="/assets/js/64.a01212d2.js"><link rel="prefetch" href="/assets/js/65.ad2ddb81.js"><link rel="prefetch" href="/assets/js/66.0493200f.js"><link rel="prefetch" href="/assets/js/67.6b094279.js"><link rel="prefetch" href="/assets/js/68.3ade9e58.js"><link rel="prefetch" href="/assets/js/69.3d974bc3.js"><link rel="prefetch" href="/assets/js/7.dd509bad.js"><link rel="prefetch" href="/assets/js/70.bda6a43e.js"><link rel="prefetch" href="/assets/js/71.78d92800.js"><link rel="prefetch" href="/assets/js/72.730c0373.js"><link rel="prefetch" href="/assets/js/73.4a2dd28a.js"><link rel="prefetch" href="/assets/js/8.520393bc.js"><link rel="prefetch" href="/assets/js/9.e4989b40.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.2a8ad169.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/assets/img/profile.png" alt="罗湖" class="logo"> <span class="site-name can-hide">罗湖</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/js/" class="nav-link">
+  js
+</a></div><div class="nav-item"><a href="/css/" class="nav-link router-link-active">
+  css
+</a></div><div class="nav-item"><a href="/node/" class="nav-link">
+  node
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="开发经验" class="dropdown-title"><span class="title">开发经验</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/experience/tool/" class="nav-link">
+  工具
+</a></li><li class="dropdown-item"><!----> <a href="/experience/exception/" class="nav-link">
+  异常
+</a></li><li class="dropdown-item"><!----> <a href="/experience/engineering/" class="nav-link">
+  工程化
+</a></li><li class="dropdown-item"><!----> <a href="/experience/optimize/" class="nav-link">
+  优化
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="设计模式" class="dropdown-title"><span class="title">设计模式</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pattern/basic/" class="nav-link">
+  基础知识
+</a></li><li class="dropdown-item"><!----> <a href="/pattern/core/" class="nav-link">
+  设计模式
+</a></li><li class="dropdown-item"><!----> <a href="/pattern/skill/" class="nav-link">
+  设计原则与编程技巧
+</a></li></ul></div></div><div class="nav-item"><a href="/progress/" class="nav-link">
+  修身
+</a></div><div class="nav-item"><a href="/career/" class="nav-link">
+  职业
+</a></div> <a href="https://github.com/lanbling/document" target="_blank" rel="noopener noreferrer" class="repo-link">
+    查看源码
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/js/" class="nav-link">
+  js
+</a></div><div class="nav-item"><a href="/css/" class="nav-link router-link-active">
+  css
+</a></div><div class="nav-item"><a href="/node/" class="nav-link">
+  node
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="开发经验" class="dropdown-title"><span class="title">开发经验</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/experience/tool/" class="nav-link">
+  工具
+</a></li><li class="dropdown-item"><!----> <a href="/experience/exception/" class="nav-link">
+  异常
+</a></li><li class="dropdown-item"><!----> <a href="/experience/engineering/" class="nav-link">
+  工程化
+</a></li><li class="dropdown-item"><!----> <a href="/experience/optimize/" class="nav-link">
+  优化
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="设计模式" class="dropdown-title"><span class="title">设计模式</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pattern/basic/" class="nav-link">
+  基础知识
+</a></li><li class="dropdown-item"><!----> <a href="/pattern/core/" class="nav-link">
+  设计模式
+</a></li><li class="dropdown-item"><!----> <a href="/pattern/skill/" class="nav-link">
+  设计原则与编程技巧
+</a></li></ul></div></div><div class="nav-item"><a href="/progress/" class="nav-link">
+  修身
+</a></div><div class="nav-item"><a href="/career/" class="nav-link">
+  职业
+</a></div> <a href="https://github.com/lanbling/document" target="_blank" rel="noopener noreferrer" class="repo-link">
+    查看源码
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>基础</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/css/基础/页面布局.html" class="sidebar-link">页面布局</a></li><li><a href="/css/基础/CSS盒模型.html" class="active sidebar-link">CSS盒模型</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/css/基础/CSS盒模型.html#基本概念：标准模型-ie模型" class="sidebar-link">基本概念：标准模型+IE模型</a></li><li class="sidebar-sub-header"><a href="/css/基础/CSS盒模型.html#标准模型和ie模型的区别" class="sidebar-link">标准模型和IE模型的区别</a></li><li class="sidebar-sub-header"><a href="/css/基础/CSS盒模型.html#css如何设置这两种模型" class="sidebar-link">CSS如何设置这两种模型</a></li><li class="sidebar-sub-header"><a href="/css/基础/CSS盒模型.html#js如何设置获取盒模型对应的宽和高" class="sidebar-link">JS如何设置获取盒模型对应的宽和高</a></li><li class="sidebar-sub-header"><a href="/css/基础/CSS盒模型.html#实例题（根据盒模型解释边距重叠）" class="sidebar-link">实例题（根据盒模型解释边距重叠）</a></li><li class="sidebar-sub-header"><a href="/css/基础/CSS盒模型.html#bfc（边距重叠解决方案-block-formatting-context）" class="sidebar-link">BFC（边距重叠解决方案 Block Formatting Context）</a></li></ul></li><li><a href="/css/基础/1px问题.html" class="sidebar-link">1PX问题</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="css盒模型"><a href="#css盒模型" class="header-anchor">#</a> CSS盒模型</h1> <h2 id="基本概念：标准模型-ie模型"><a href="#基本概念：标准模型-ie模型" class="header-anchor">#</a> 基本概念：标准模型+IE模型</h2> <p><img src="http://image.lanbling.com/md/image-20200504155614190.png" alt="image-20200504155614190"></p> <p><img src="http://image.lanbling.com/md/image-20200504155648205.png" alt="image-20200504155648205"></p> <h2 id="标准模型和ie模型的区别"><a href="#标准模型和ie模型的区别" class="header-anchor">#</a> 标准模型和IE模型的区别</h2> <h2 id="css如何设置这两种模型"><a href="#css如何设置这两种模型" class="header-anchor">#</a> CSS如何设置这两种模型</h2> <div class="language-css extra-class"><pre class="language-css"><code><span class="token property">box-sizing</span><span class="token punctuation">:</span>content-box<span class="token punctuation">;</span>  标准模型
+<span class="token property">box-sizing</span><span class="token punctuation">:</span>border-box<span class="token punctuation">;</span>  IE模型
+</code></pre></div><h2 id="js如何设置获取盒模型对应的宽和高"><a href="#js如何设置获取盒模型对应的宽和高" class="header-anchor">#</a> JS如何设置获取盒模型对应的宽和高</h2> <div class="language-js extra-class"><pre class="language-js"><code>dom<span class="token punctuation">.</span>style<span class="token punctuation">.</span>width<span class="token operator">/</span>height：只能取到内联样式的宽高，link引入的读不到
+是否能取到所有元素的宽高？
+dom<span class="token punctuation">.</span>currentStyle<span class="token punctuation">.</span>width<span class="token operator">/</span>height  渲染以后的样式，只有<span class="token constant">IE</span>支持
+window<span class="token punctuation">.</span><span class="token function">getComputedStyle</span><span class="token punctuation">(</span>dom<span class="token punctuation">)</span><span class="token punctuation">.</span>width<span class="token operator">/</span>height  兼容性佳
+dom<span class="token punctuation">.</span><span class="token function">getBoundingClientRect</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>width<span class="token operator">/</span>height  
+这个是窗口的，left、top、right、bottom，计算一个元素的宽高
+</code></pre></div><h2 id="实例题（根据盒模型解释边距重叠）"><a href="#实例题（根据盒模型解释边距重叠）" class="header-anchor">#</a> 实例题（根据盒模型解释边距重叠）</h2> <p><img src="http://image.lanbling.com/md/image-20200504221550556.png" alt="image-20200504221550556"></p> <h2 id="bfc（边距重叠解决方案-block-formatting-context）"><a href="#bfc（边距重叠解决方案-block-formatting-context）" class="header-anchor">#</a> BFC（边距重叠解决方案 Block Formatting Context）</h2> <p>块级格式化上下文    IFC：内联格式化上下文</p> <h6 id="_1、bfc的基本概念"><a href="#_1、bfc的基本概念" class="header-anchor">#</a> 1、BFC的基本概念</h6> <h6 id="_2、bfc的原理："><a href="#_2、bfc的原理：" class="header-anchor">#</a> 2、BFC的原理：</h6> <p>2.1  BFC这个元素的垂直边距不会发生重叠</p> <p>2.2	BFC这个元素不与与浮动元素重叠</p> <p>2.3    BFC在页面上是一个独立的容器，内外元素不影响</p> <p>2.4 	计算高度，浮动元素高度也会参与计算</p> <h6 id="_3、如何创建bfc？"><a href="#_3、如何创建bfc？" class="header-anchor">#</a> 3、如何创建BFC？</h6> <p>3.1 overflow不为visible</p> <p>3.2  float值不为none</p> <p>3.3  position不为static</p> <p>3.4 display属性table方面的</p> <h6 id="_4、bfc的使用场景"><a href="#_4、bfc的使用场景" class="header-anchor">#</a> 4、BFC的使用场景</h6></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/lanbling/document/edit/master/docs/css/基础/CSS盒模型.md" target="_blank" rel="noopener noreferrer">帮助我们改善此页面！</a> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></div> <div class="last-updated"><span class="prefix">最后更新时间:</span> <span class="time">2020年6月15日星期一晚上11点19分</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/css/基础/页面布局.html" class="prev">
+        页面布局
+      </a></span> <span class="next"><a href="/css/基础/1px问题.html">
+        1PX问题
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.7432f3e5.js" defer></script><script src="/assets/js/2.5aced2d4.js" defer></script><script src="/assets/js/14.5b7e352e.js" defer></script>
+  </body>
+</html>

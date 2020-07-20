@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>远程服务器拉vue项目，编译报错 | 罗湖</title>
+    <meta name="description" content="不如意事常八九，可与言者无二三">
+    <meta name="generator" content="VuePress 1.4.0">
+    <link rel="icon" href="/favicon.ico">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.2/jquery.fancybox.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.2/jquery.fancybox.min.css">
+    
+    <link rel="preload" href="/assets/css/0.styles.2a8ad169.css" as="style"><link rel="preload" href="/assets/js/app.7432f3e5.js" as="script"><link rel="preload" href="/assets/js/2.5aced2d4.js" as="script"><link rel="preload" href="/assets/js/22.961432bc.js" as="script"><link rel="prefetch" href="/assets/js/10.ad3ba127.js"><link rel="prefetch" href="/assets/js/11.e9d40382.js"><link rel="prefetch" href="/assets/js/12.c895aa41.js"><link rel="prefetch" href="/assets/js/13.d94d6e78.js"><link rel="prefetch" href="/assets/js/14.5b7e352e.js"><link rel="prefetch" href="/assets/js/15.541c6e8a.js"><link rel="prefetch" href="/assets/js/16.32c2d9b5.js"><link rel="prefetch" href="/assets/js/17.7a92153c.js"><link rel="prefetch" href="/assets/js/18.444ff785.js"><link rel="prefetch" href="/assets/js/19.c3f37e80.js"><link rel="prefetch" href="/assets/js/20.e16c3ba3.js"><link rel="prefetch" href="/assets/js/21.9ddfd863.js"><link rel="prefetch" href="/assets/js/23.27fdba8d.js"><link rel="prefetch" href="/assets/js/24.97447734.js"><link rel="prefetch" href="/assets/js/25.39c264e0.js"><link rel="prefetch" href="/assets/js/26.6a36b440.js"><link rel="prefetch" href="/assets/js/27.2a3cfa74.js"><link rel="prefetch" href="/assets/js/28.bb6fa8ab.js"><link rel="prefetch" href="/assets/js/29.c29c1bab.js"><link rel="prefetch" href="/assets/js/3.6b4fff62.js"><link rel="prefetch" href="/assets/js/30.f0fe177b.js"><link rel="prefetch" href="/assets/js/31.726ce2a1.js"><link rel="prefetch" href="/assets/js/32.c76004bd.js"><link rel="prefetch" href="/assets/js/33.318b7970.js"><link rel="prefetch" href="/assets/js/34.17f63915.js"><link rel="prefetch" href="/assets/js/35.3d6782f1.js"><link rel="prefetch" href="/assets/js/36.a1aee197.js"><link rel="prefetch" href="/assets/js/37.b0c74960.js"><link rel="prefetch" href="/assets/js/38.48bbe4a6.js"><link rel="prefetch" href="/assets/js/39.0cca90a4.js"><link rel="prefetch" href="/assets/js/4.7a4d83b2.js"><link rel="prefetch" href="/assets/js/40.2bed5538.js"><link rel="prefetch" href="/assets/js/41.adbc1770.js"><link rel="prefetch" href="/assets/js/42.1210e1c5.js"><link rel="prefetch" href="/assets/js/43.44c5242f.js"><link rel="prefetch" href="/assets/js/44.08bd0ca2.js"><link rel="prefetch" href="/assets/js/45.2d20f3de.js"><link rel="prefetch" href="/assets/js/46.a294339c.js"><link rel="prefetch" href="/assets/js/47.1ec4fce2.js"><link rel="prefetch" href="/assets/js/48.c0f89a67.js"><link rel="prefetch" href="/assets/js/49.4f8db54b.js"><link rel="prefetch" href="/assets/js/5.6e68c4f5.js"><link rel="prefetch" href="/assets/js/50.15f84966.js"><link rel="prefetch" href="/assets/js/51.ae6081da.js"><link rel="prefetch" href="/assets/js/52.f5fe5324.js"><link rel="prefetch" href="/assets/js/53.db0f30d7.js"><link rel="prefetch" href="/assets/js/54.0093e258.js"><link rel="prefetch" href="/assets/js/55.28c8cfb7.js"><link rel="prefetch" href="/assets/js/56.3648c491.js"><link rel="prefetch" href="/assets/js/57.67064559.js"><link rel="prefetch" href="/assets/js/58.6dda11c1.js"><link rel="prefetch" href="/assets/js/59.5dc6023a.js"><link rel="prefetch" href="/assets/js/6.36295da7.js"><link rel="prefetch" href="/assets/js/60.e58d100a.js"><link rel="prefetch" href="/assets/js/61.d209e777.js"><link rel="prefetch" href="/assets/js/62.32b552f9.js"><link rel="prefetch" href="/assets/js/63.5a9880dc.js"><link rel="prefetch" href="/assets/js/64.a01212d2.js"><link rel="prefetch" href="/assets/js/65.ad2ddb81.js"><link rel="prefetch" href="/assets/js/66.0493200f.js"><link rel="prefetch" href="/assets/js/67.6b094279.js"><link rel="prefetch" href="/assets/js/68.3ade9e58.js"><link rel="prefetch" href="/assets/js/69.3d974bc3.js"><link rel="prefetch" href="/assets/js/7.dd509bad.js"><link rel="prefetch" href="/assets/js/70.bda6a43e.js"><link rel="prefetch" href="/assets/js/71.78d92800.js"><link rel="prefetch" href="/assets/js/72.730c0373.js"><link rel="prefetch" href="/assets/js/73.4a2dd28a.js"><link rel="prefetch" href="/assets/js/8.520393bc.js"><link rel="prefetch" href="/assets/js/9.e4989b40.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.2a8ad169.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/assets/img/profile.png" alt="罗湖" class="logo"> <span class="site-name can-hide">罗湖</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/js/" class="nav-link">
+  js
+</a></div><div class="nav-item"><a href="/css/" class="nav-link">
+  css
+</a></div><div class="nav-item"><a href="/node/" class="nav-link">
+  node
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="开发经验" class="dropdown-title"><span class="title">开发经验</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/experience/tool/" class="nav-link">
+  工具
+</a></li><li class="dropdown-item"><!----> <a href="/experience/exception/" class="nav-link router-link-active">
+  异常
+</a></li><li class="dropdown-item"><!----> <a href="/experience/engineering/" class="nav-link">
+  工程化
+</a></li><li class="dropdown-item"><!----> <a href="/experience/optimize/" class="nav-link">
+  优化
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="设计模式" class="dropdown-title"><span class="title">设计模式</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pattern/basic/" class="nav-link">
+  基础知识
+</a></li><li class="dropdown-item"><!----> <a href="/pattern/core/" class="nav-link">
+  设计模式
+</a></li><li class="dropdown-item"><!----> <a href="/pattern/skill/" class="nav-link">
+  设计原则与编程技巧
+</a></li></ul></div></div><div class="nav-item"><a href="/progress/" class="nav-link">
+  修身
+</a></div><div class="nav-item"><a href="/career/" class="nav-link">
+  职业
+</a></div> <a href="https://github.com/lanbling/document" target="_blank" rel="noopener noreferrer" class="repo-link">
+    查看源码
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/js/" class="nav-link">
+  js
+</a></div><div class="nav-item"><a href="/css/" class="nav-link">
+  css
+</a></div><div class="nav-item"><a href="/node/" class="nav-link">
+  node
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="开发经验" class="dropdown-title"><span class="title">开发经验</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/experience/tool/" class="nav-link">
+  工具
+</a></li><li class="dropdown-item"><!----> <a href="/experience/exception/" class="nav-link router-link-active">
+  异常
+</a></li><li class="dropdown-item"><!----> <a href="/experience/engineering/" class="nav-link">
+  工程化
+</a></li><li class="dropdown-item"><!----> <a href="/experience/optimize/" class="nav-link">
+  优化
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="设计模式" class="dropdown-title"><span class="title">设计模式</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pattern/basic/" class="nav-link">
+  基础知识
+</a></li><li class="dropdown-item"><!----> <a href="/pattern/core/" class="nav-link">
+  设计模式
+</a></li><li class="dropdown-item"><!----> <a href="/pattern/skill/" class="nav-link">
+  设计原则与编程技巧
+</a></li></ul></div></div><div class="nav-item"><a href="/progress/" class="nav-link">
+  修身
+</a></div><div class="nav-item"><a href="/career/" class="nav-link">
+  职业
+</a></div> <a href="https://github.com/lanbling/document" target="_blank" rel="noopener noreferrer" class="repo-link">
+    查看源码
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><a href="/experience/tool/" class="sidebar-heading clickable"><span>工具</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/experience/exception/" class="sidebar-heading clickable router-link-active open"><span>异常</span> <span class="arrow down"></span></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/experience/exception/vue/从服务器拉下来vue项目，无法编译通过.html" class="active sidebar-link">远程服务器拉vue项目，编译报错</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/experience/exception/vue/从服务器拉下来vue项目，无法编译通过.html#报错提示" class="sidebar-link">报错提示</a></li><li class="sidebar-sub-header"><a href="/experience/exception/vue/从服务器拉下来vue项目，无法编译通过.html#解决步骤" class="sidebar-link">解决步骤</a></li><li class="sidebar-sub-header"><a href="/experience/exception/vue/从服务器拉下来vue项目，无法编译通过.html#过程" class="sidebar-link">过程</a></li></ul></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/experience/engineering" class="sidebar-heading clickable"><span>工程化</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/experience/optimize" class="sidebar-heading clickable"><span>优化</span> <span class="arrow right"></span></a> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="远程服务器拉vue项目，编译报错"><a href="#远程服务器拉vue项目，编译报错" class="header-anchor">#</a> 远程服务器拉vue项目，编译报错</h1> <h2 id="报错提示"><a href="#报错提示" class="header-anchor">#</a> 报错提示</h2> <div class="language-node extra-class"><pre class="language-text"><code>npm ERR! Unexpected end of JSON input while parsing near
+</code></pre></div><h2 id="解决步骤"><a href="#解决步骤" class="header-anchor">#</a> 解决步骤</h2> <ol><li><p><strong>删掉package.lock.json</strong></p></li> <li><p><strong>清除cache</strong></p> <div class="language-html extra-class"><pre class="language-html"><code>npm cache clean --force
+</code></pre></div></li> <li><p><strong>进入下面这个文件夹清除cache</strong></p> <p>路径：C:/Users/PC/AppData/Roaming/npm-cache</p> <p>执行：</p> <div class="language-html extra-class"><pre class="language-html"><code>npm cache clean --force
+</code></pre></div></li></ol> <h2 id="过程"><a href="#过程" class="header-anchor">#</a> 过程</h2> <p>之前拉下来编译老是报错，报错代码提示当前的node与npm版本与项目不符合。于是找资料，清除了这两个地方的缓存，重新编译，通过。</p></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/lanbling/document/edit/master/docs/experience/exception/vue/从服务器拉下来vue项目，无法编译通过.md" target="_blank" rel="noopener noreferrer">帮助我们改善此页面！</a> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></div> <div class="last-updated"><span class="prefix">最后更新时间:</span> <span class="time">2020年6月2日星期二中午12点29分</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/experience/tool/git/xshell连接远程服务器.html" class="prev">
+        xshell连接远程服务器
+      </a></span> <span class="next"><a href="/experience/engineering/Sass.html">
+        Sass语法总结
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.7432f3e5.js" defer></script><script src="/assets/js/2.5aced2d4.js" defer></script><script src="/assets/js/22.961432bc.js" defer></script>
+  </body>
+</html>

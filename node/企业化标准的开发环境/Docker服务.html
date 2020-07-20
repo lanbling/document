@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>容器化应用Docker | 罗湖</title>
+    <meta name="description" content="不如意事常八九，可与言者无二三">
+    <meta name="generator" content="VuePress 1.4.0">
+    <link rel="icon" href="/favicon.ico">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.2/jquery.fancybox.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.2/jquery.fancybox.min.css">
+    
+    <link rel="preload" href="/assets/css/0.styles.2a8ad169.css" as="style"><link rel="preload" href="/assets/js/app.7432f3e5.js" as="script"><link rel="preload" href="/assets/js/2.5aced2d4.js" as="script"><link rel="preload" href="/assets/js/51.ae6081da.js" as="script"><link rel="prefetch" href="/assets/js/10.ad3ba127.js"><link rel="prefetch" href="/assets/js/11.e9d40382.js"><link rel="prefetch" href="/assets/js/12.c895aa41.js"><link rel="prefetch" href="/assets/js/13.d94d6e78.js"><link rel="prefetch" href="/assets/js/14.5b7e352e.js"><link rel="prefetch" href="/assets/js/15.541c6e8a.js"><link rel="prefetch" href="/assets/js/16.32c2d9b5.js"><link rel="prefetch" href="/assets/js/17.7a92153c.js"><link rel="prefetch" href="/assets/js/18.444ff785.js"><link rel="prefetch" href="/assets/js/19.c3f37e80.js"><link rel="prefetch" href="/assets/js/20.e16c3ba3.js"><link rel="prefetch" href="/assets/js/21.9ddfd863.js"><link rel="prefetch" href="/assets/js/22.961432bc.js"><link rel="prefetch" href="/assets/js/23.27fdba8d.js"><link rel="prefetch" href="/assets/js/24.97447734.js"><link rel="prefetch" href="/assets/js/25.39c264e0.js"><link rel="prefetch" href="/assets/js/26.6a36b440.js"><link rel="prefetch" href="/assets/js/27.2a3cfa74.js"><link rel="prefetch" href="/assets/js/28.bb6fa8ab.js"><link rel="prefetch" href="/assets/js/29.c29c1bab.js"><link rel="prefetch" href="/assets/js/3.6b4fff62.js"><link rel="prefetch" href="/assets/js/30.f0fe177b.js"><link rel="prefetch" href="/assets/js/31.726ce2a1.js"><link rel="prefetch" href="/assets/js/32.c76004bd.js"><link rel="prefetch" href="/assets/js/33.318b7970.js"><link rel="prefetch" href="/assets/js/34.17f63915.js"><link rel="prefetch" href="/assets/js/35.3d6782f1.js"><link rel="prefetch" href="/assets/js/36.a1aee197.js"><link rel="prefetch" href="/assets/js/37.b0c74960.js"><link rel="prefetch" href="/assets/js/38.48bbe4a6.js"><link rel="prefetch" href="/assets/js/39.0cca90a4.js"><link rel="prefetch" href="/assets/js/4.7a4d83b2.js"><link rel="prefetch" href="/assets/js/40.2bed5538.js"><link rel="prefetch" href="/assets/js/41.adbc1770.js"><link rel="prefetch" href="/assets/js/42.1210e1c5.js"><link rel="prefetch" href="/assets/js/43.44c5242f.js"><link rel="prefetch" href="/assets/js/44.08bd0ca2.js"><link rel="prefetch" href="/assets/js/45.2d20f3de.js"><link rel="prefetch" href="/assets/js/46.a294339c.js"><link rel="prefetch" href="/assets/js/47.1ec4fce2.js"><link rel="prefetch" href="/assets/js/48.c0f89a67.js"><link rel="prefetch" href="/assets/js/49.4f8db54b.js"><link rel="prefetch" href="/assets/js/5.6e68c4f5.js"><link rel="prefetch" href="/assets/js/50.15f84966.js"><link rel="prefetch" href="/assets/js/52.f5fe5324.js"><link rel="prefetch" href="/assets/js/53.db0f30d7.js"><link rel="prefetch" href="/assets/js/54.0093e258.js"><link rel="prefetch" href="/assets/js/55.28c8cfb7.js"><link rel="prefetch" href="/assets/js/56.3648c491.js"><link rel="prefetch" href="/assets/js/57.67064559.js"><link rel="prefetch" href="/assets/js/58.6dda11c1.js"><link rel="prefetch" href="/assets/js/59.5dc6023a.js"><link rel="prefetch" href="/assets/js/6.36295da7.js"><link rel="prefetch" href="/assets/js/60.e58d100a.js"><link rel="prefetch" href="/assets/js/61.d209e777.js"><link rel="prefetch" href="/assets/js/62.32b552f9.js"><link rel="prefetch" href="/assets/js/63.5a9880dc.js"><link rel="prefetch" href="/assets/js/64.a01212d2.js"><link rel="prefetch" href="/assets/js/65.ad2ddb81.js"><link rel="prefetch" href="/assets/js/66.0493200f.js"><link rel="prefetch" href="/assets/js/67.6b094279.js"><link rel="prefetch" href="/assets/js/68.3ade9e58.js"><link rel="prefetch" href="/assets/js/69.3d974bc3.js"><link rel="prefetch" href="/assets/js/7.dd509bad.js"><link rel="prefetch" href="/assets/js/70.bda6a43e.js"><link rel="prefetch" href="/assets/js/71.78d92800.js"><link rel="prefetch" href="/assets/js/72.730c0373.js"><link rel="prefetch" href="/assets/js/73.4a2dd28a.js"><link rel="prefetch" href="/assets/js/8.520393bc.js"><link rel="prefetch" href="/assets/js/9.e4989b40.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.2a8ad169.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/assets/img/profile.png" alt="罗湖" class="logo"> <span class="site-name can-hide">罗湖</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/js/" class="nav-link">
+  js
+</a></div><div class="nav-item"><a href="/css/" class="nav-link">
+  css
+</a></div><div class="nav-item"><a href="/node/" class="nav-link router-link-active">
+  node
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="开发经验" class="dropdown-title"><span class="title">开发经验</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/experience/tool/" class="nav-link">
+  工具
+</a></li><li class="dropdown-item"><!----> <a href="/experience/exception/" class="nav-link">
+  异常
+</a></li><li class="dropdown-item"><!----> <a href="/experience/engineering/" class="nav-link">
+  工程化
+</a></li><li class="dropdown-item"><!----> <a href="/experience/optimize/" class="nav-link">
+  优化
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="设计模式" class="dropdown-title"><span class="title">设计模式</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pattern/basic/" class="nav-link">
+  基础知识
+</a></li><li class="dropdown-item"><!----> <a href="/pattern/core/" class="nav-link">
+  设计模式
+</a></li><li class="dropdown-item"><!----> <a href="/pattern/skill/" class="nav-link">
+  设计原则与编程技巧
+</a></li></ul></div></div><div class="nav-item"><a href="/progress/" class="nav-link">
+  修身
+</a></div><div class="nav-item"><a href="/career/" class="nav-link">
+  职业
+</a></div> <a href="https://github.com/lanbling/document" target="_blank" rel="noopener noreferrer" class="repo-link">
+    查看源码
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/js/" class="nav-link">
+  js
+</a></div><div class="nav-item"><a href="/css/" class="nav-link">
+  css
+</a></div><div class="nav-item"><a href="/node/" class="nav-link router-link-active">
+  node
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="开发经验" class="dropdown-title"><span class="title">开发经验</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/experience/tool/" class="nav-link">
+  工具
+</a></li><li class="dropdown-item"><!----> <a href="/experience/exception/" class="nav-link">
+  异常
+</a></li><li class="dropdown-item"><!----> <a href="/experience/engineering/" class="nav-link">
+  工程化
+</a></li><li class="dropdown-item"><!----> <a href="/experience/optimize/" class="nav-link">
+  优化
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="设计模式" class="dropdown-title"><span class="title">设计模式</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pattern/basic/" class="nav-link">
+  基础知识
+</a></li><li class="dropdown-item"><!----> <a href="/pattern/core/" class="nav-link">
+  设计模式
+</a></li><li class="dropdown-item"><!----> <a href="/pattern/skill/" class="nav-link">
+  设计原则与编程技巧
+</a></li></ul></div></div><div class="nav-item"><a href="/progress/" class="nav-link">
+  修身
+</a></div><div class="nav-item"><a href="/career/" class="nav-link">
+  职业
+</a></div> <a href="https://github.com/lanbling/document" target="_blank" rel="noopener noreferrer" class="repo-link">
+    查看源码
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>企业化标准的开发环境搭建</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/node/企业化标准的开发环境/前端工程化.html" class="sidebar-link">前端工程化工具-入门</a></li><li><a href="/node/企业化标准的开发环境/虚拟机安装centos细节.html" class="sidebar-link">虚拟机安装centos细节</a></li><li><a href="/node/企业化标准的开发环境/Docker服务.html" class="active sidebar-link">容器化应用Docker</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/node/企业化标准的开发环境/Docker服务.html#docker主要特性" class="sidebar-link">Docker主要特性</a></li><li class="sidebar-sub-header"><a href="/node/企业化标准的开发环境/Docker服务.html#使用docker启动服务" class="sidebar-link">使用docker启动服务</a></li><li class="sidebar-sub-header"><a href="/node/企业化标准的开发环境/Docker服务.html#docker-compose" class="sidebar-link">Docker Compose</a></li><li class="sidebar-sub-header"><a href="/node/企业化标准的开发环境/Docker服务.html#docker仓库（docker-hub及私有仓库harbor）" class="sidebar-link">Docker仓库（Docker hub及私有仓库Harbor）</a></li><li class="sidebar-sub-header"><a href="/node/企业化标准的开发环境/Docker服务.html#nvm" class="sidebar-link">nvm</a></li><li class="sidebar-sub-header"><a href="/node/企业化标准的开发环境/Docker服务.html#发布一个node的模块" class="sidebar-link">发布一个node的模块</a></li></ul></li><li><a href="/node/企业化标准的开发环境/centos配置ssh服务.html" class="sidebar-link">企业标准的开发环境搭建</a></li><li><a href="/node/企业化标准的开发环境/真机联调总结.html" class="sidebar-link">真机调试总结</a></li><li><a href="/node/企业化标准的开发环境/重学webpack.html" class="sidebar-link">重学webpack</a></li><li><a href="/node/企业化标准的开发环境/Mock数据.html" class="sidebar-link">Mock数据</a></li><li><a href="/node/企业化标准的开发环境/webstorm与vscode.html" class="sidebar-link">编辑器</a></li><li><a href="/node/企业化标准的开发环境/设置淘宝镜像.html" class="sidebar-link">设置淘宝镜像</a></li><li><a href="/node/企业化标准的开发环境/gulp开发流程.html" class="sidebar-link">gulp开发流程</a></li><li><a href="/node/企业化标准的开发环境/配置自己的脚手架.html" class="sidebar-link">配置自己的脚手架</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>基础</span> <!----></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>进阶</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="容器化应用docker"><a href="#容器化应用docker" class="header-anchor">#</a> 容器化应用Docker</h1> <p><img src="http://image.lanbling.com/md/image-20200714003139475.png" alt="image-20200714003139475"></p> <p><img src="http://image.lanbling.com/md/image-20200714003719762.png" alt="image-20200714003719762"></p> <h2 id="docker主要特性"><a href="#docker主要特性" class="header-anchor">#</a> Docker主要特性</h2> <h3 id="特点"><a href="#特点" class="header-anchor">#</a> 特点</h3> <ul><li>文件、资源、网络隔离</li> <li>变更管理、日志记录</li> <li>写时复制</li></ul> <h4 id="安装"><a href="#安装" class="header-anchor">#</a> 安装</h4> <p><a href="https://www.toimc.com/docker%E5%85%A5%E9%97%A8%E4%B9%8B%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/" target="_blank" rel="noopener noreferrer">Docker入门之安装教程<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment">#启动docker服务</span>
+systemctl start docker
+
+<span class="token comment">#查看docker服务</span>
+systemctl status docker
+
+<span class="token comment">#运行docker项目，先查找本地，若本地没有，则去docker仓库拉取</span>
+docker run hello-world
+
+<span class="token comment">#未知含义</span>
+docker <span class="token function">ps</span>
+<span class="token comment">#查看所有的镜像</span>
+docker <span class="token function">ps</span> -a
+
+<span class="token comment">#开启镜像加速，优先从中国区拉取镜像</span>
+<span class="token function">vim</span> /etc/docker/daemon.json
+<span class="token comment">#配置如下：</span>
+<span class="token punctuation">{</span>
+  <span class="token string">&quot;registry-mirrors&quot;</span><span class="token builtin class-name">:</span> <span class="token punctuation">[</span><span class="token string">&quot;https://registry.docker-cn.com&quot;</span><span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+
+systemctl  daemon-reload
+systemctl restart docker
+</code></pre></div><h2 id="使用docker启动服务"><a href="#使用docker启动服务" class="header-anchor">#</a> 使用docker启动服务</h2> <h3 id="在docker中安装mysql服务"><a href="#在docker中安装mysql服务" class="header-anchor">#</a> 在docker中安装mysql服务</h3> <ul><li><p>在dockerhub中查找mysql，并安装</p> <div class="language-bash extra-class"><pre class="language-bash"><code>docker run --name 你的mysql名字 -e <span class="token assign-left variable">MYSQL_ROOT_PASSWORD</span><span class="token operator">=</span>你的密码 -d mysql
+<span class="token comment">#-d：代表后台运行</span>
+</code></pre></div><p>安装成功，查看是否有</p> <div class="language-bash extra-class"><pre class="language-bash"><code>docker <span class="token function">ps</span>
+</code></pre></div></li> <li><p>删除服务，加入name叫做imooc-mysql</p> <div class="language-bash extra-class"><pre class="language-bash"><code>docker <span class="token function">rm</span> imooc-mysql
+</code></pre></div><p>运行中的服务不能直接删除，要先停止</p> <div class="language-bash extra-class"><pre class="language-bash"><code>docker stop imooc-mysql
+</code></pre></div><p>再删除</p> <div class="language-bash extra-class"><pre class="language-bash"><code>docker <span class="token function">rm</span> imooc-mysql
+</code></pre></div></li> <li><p>查看docker中服务的详细信息，包括日志</p> <div class="language-bash extra-class"><pre class="language-bash"><code>docker logs -f imooc-mysql
+</code></pre></div></li></ul> <h3 id="启动docker的另一种方式，可以指定端口号"><a href="#启动docker的另一种方式，可以指定端口号" class="header-anchor">#</a> 启动docker的另一种方式，可以指定端口号</h3> <ul><li><p>指定端口启动</p> <div class="language-bash extra-class"><pre class="language-bash"><code>docker run --name 你的服务名字 -e <span class="token assign-left variable">MYSQL_ROOT_PASSWORD</span><span class="token operator">=</span>你的密码 -p <span class="token number">28001</span>:3306 -d mysql
+</code></pre></div><p>如何理解写时复制，使用了本机的，不用再去安装</p></li> <li><p>安装完看下有没跑起来</p> <div class="language-bash extra-class"><pre class="language-bash"><code>docker logs -f 你的服务名字
+</code></pre></div></li> <li><p>使用navigate连接mysql</p> <p>端口号用的是28001</p></li></ul> <h2 id="docker-compose"><a href="#docker-compose" class="header-anchor">#</a> Docker Compose</h2> <h3 id="初始化docker-compose服务"><a href="#初始化docker-compose服务" class="header-anchor">#</a> 初始化docker-compose服务</h3> <ul><li><p>下载docker-compose</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">sudo</span> <span class="token function">curl</span> -L <span class="token string">&quot;https://github.com/docker/compose/releases/download/1.23.2/docker-compose-<span class="token variable"><span class="token variable">$(</span><span class="token function">uname</span> -s<span class="token variable">)</span></span>-<span class="token variable"><span class="token variable">$(</span><span class="token function">uname</span> -m<span class="token variable">)</span></span>&quot;</span> -o /usr/local/bin/docker-compose
+</code></pre></div></li> <li><p>给予执行权限</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">sudo</span> <span class="token function">chmod</span> +x /usr/local/bin/docker-compose
+</code></pre></div></li> <li><p>测试命令</p> <div class="language-bash extra-class"><pre class="language-bash"><code>docker-compose --version
+</code></pre></div></li> <li><p>进入home目录，创建yml文件</p> <div class="language- extra-class"><pre class="language-text"><code>vi docker-compose.yml
+</code></pre></div><p>文件内容如下：</p> <div class="language-yaml extra-class"><pre class="language-yaml"><code><span class="token key atrule">version</span><span class="token punctuation">:</span> <span class="token string">'3'</span>
+<span class="token key atrule">services</span><span class="token punctuation">:</span>
+  <span class="token key atrule">mysql1</span><span class="token punctuation">:</span>
+    <span class="token key atrule">image</span><span class="token punctuation">:</span> mysql
+    <span class="token key atrule">environment</span><span class="token punctuation">:</span>
+    <span class="token punctuation">-</span> MYSQL_ROOT_PASSWORD=123456
+    <span class="token key atrule">ports</span><span class="token punctuation">:</span>
+    <span class="token punctuation">-</span> 28002<span class="token punctuation">:</span><span class="token number">3306</span>
+    
+  <span class="token key atrule">mysql2</span><span class="token punctuation">:</span>
+    <span class="token key atrule">image</span><span class="token punctuation">:</span> mysql
+    <span class="token key atrule">environment</span><span class="token punctuation">:</span>
+    <span class="token punctuation">-</span> MYSQL_ROOT_PASSWORD=123456
+    <span class="token key atrule">ports</span><span class="token punctuation">:</span>
+    <span class="token punctuation">-</span> 28003<span class="token punctuation">:</span><span class="token number">3306</span>
+</code></pre></div></li> <li><p>运行yml文件，启动服务</p> <div class="language-bash extra-class"><pre class="language-bash"><code>docker-compose up -d
+</code></pre></div></li></ul> <h3 id="docker-compose的其它命令"><a href="#docker-compose的其它命令" class="header-anchor">#</a> docker-compose的其它命令</h3> <ul><li><p>停止所有服务</p> <div class="language-bash extra-class"><pre class="language-bash"><code>docker-compose stop
+</code></pre></div></li> <li><p>删除容器</p> <div class="language-bash extra-class"><pre class="language-bash"><code>docker-compose <span class="token function">rm</span>
+</code></pre></div></li></ul> <h2 id="docker仓库（docker-hub及私有仓库harbor）"><a href="#docker仓库（docker-hub及私有仓库harbor）" class="header-anchor">#</a> Docker仓库（Docker hub及私有仓库Harbor）</h2> <ul><li><p>登录</p> <div class="language-bash extra-class"><pre class="language-bash"><code>docker login
+</code></pre></div></li> <li><p>查看本地镜像</p> <div class="language-bash extra-class"><pre class="language-bash"><code>docker <span class="token function">ps</span>
+</code></pre></div></li> <li><p>提交服务</p> <div class="language-bash extra-class"><pre class="language-bash"><code>docker commit 包id  前缀/远程镜像的名字：1.0
+</code></pre></div><p>查看是否已经commit</p> <div class="language-bash extra-class"><pre class="language-bash"><code>dokcer images
+</code></pre></div><p>推送到远程</p> <div class="language-bash extra-class"><pre class="language-bash"><code>docker push 前缀/远程镜像的名字：1.0
+</code></pre></div><p>远程拉镜像</p> <div class="language-bash extra-class"><pre class="language-bash"><code>docker pull 前缀/远程镜像的名字：版本号
+</code></pre></div></li></ul> <h2 id="nvm"><a href="#nvm" class="header-anchor">#</a> nvm</h2> <h3 id="安装-2"><a href="#安装-2" class="header-anchor">#</a> 安装</h3> <ul><li><p>从仓库下载安装文件</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">wget</span> -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh <span class="token operator">|</span> <span class="token function">bash</span>
+</code></pre></div></li> <li><p>在~/.bash_profile文件中添加</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token builtin class-name">export</span> <span class="token assign-left variable">NVM_DIR</span><span class="token operator">=</span><span class="token string">&quot;<span class="token variable"><span class="token variable">$(</span><span class="token punctuation">[</span> -z <span class="token string">&quot;<span class="token variable">${XDG_CONFIG_HOME-}</span>&quot;</span> <span class="token punctuation">]</span> <span class="token operator">&amp;&amp;</span> <span class="token builtin class-name">printf</span> %s <span class="token string">&quot;<span class="token variable">${<span class="token environment constant">HOME</span>}</span>/.nvm&quot;</span> <span class="token operator">||</span> <span class="token builtin class-name">printf</span> %s <span class="token string">&quot;<span class="token variable">${XDG_CONFIG_HOME}</span>/nvm&quot;</span><span class="token variable">)</span></span>&quot;</span>
+<span class="token punctuation">[</span> -s <span class="token string">&quot;<span class="token variable">$NVM_DIR</span>/nvm.sh&quot;</span> <span class="token punctuation">]</span> <span class="token operator">&amp;&amp;</span> <span class="token punctuation">\</span>. <span class="token string">&quot;<span class="token variable">$NVM_DIR</span>/nvm.sh&quot;</span> <span class="token comment"># This loads nvm</span>
+</code></pre></div></li> <li><p>关闭，输入nvm命令，看是否生效，如未生效</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token builtin class-name">command</span> -v nvm
+</code></pre></div></li> <li><p>关闭终端后再打开</p></li></ul> <h3 id="安装node"><a href="#安装node" class="header-anchor">#</a> 安装node</h3> <ul><li><p>查看远程node的版本</p> <div class="language-bash extra-class"><pre class="language-bash"><code>nvm ls-remote
+</code></pre></div></li> <li><p>安装某个版本</p> <div class="language-bash extra-class"><pre class="language-bash"><code>nvm <span class="token function">install</span> v1.0.0
+</code></pre></div></li> <li><p>进行node版本的切换</p> <div class="language-bash extra-class"><pre class="language-bash"><code>nvm use v1.0.0
+</code></pre></div></li></ul> <h2 id="发布一个node的模块"><a href="#发布一个node的模块" class="header-anchor">#</a> 发布一个node的模块</h2> <h3 id="流程"><a href="#流程" class="header-anchor">#</a> 流程</h3> <ul><li><p>创建目录并进入</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">mkdir</span> packNamge
+</code></pre></div></li> <li><p>初始化</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">npm</span> init
+</code></pre></div></li> <li><p>写代码了。一般是在window上的编辑器写，写完再上传</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment">#文件路径：packName/index.js</span>
+
+</code></pre></div></li> <li><p>查看npm的镜像源，如果使用了淘宝的，得要改回来</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">npm</span> config list
+</code></pre></div><p>设置为npm的仓库地址</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">npm</span> <span class="token builtin class-name">set</span> register https://register.npmjs.org/
+</code></pre></div></li> <li><p>添加一个npm用户，登录的过程</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">npm</span> addUser
+</code></pre></div><p>判断是否登录：</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">npm</span> <span class="token function">whoami</span>
+</code></pre></div></li> <li><p>发布</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">npm</span> publish
+</code></pre></div></li></ul></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/lanbling/document/edit/master/docs/node/企业化标准的开发环境/Docker服务.md" target="_blank" rel="noopener noreferrer">帮助我们改善此页面！</a> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></div> <div class="last-updated"><span class="prefix">最后更新时间:</span> <span class="time">2020年7月20日星期一晚上8点55分</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/node/企业化标准的开发环境/虚拟机安装centos细节.html" class="prev">
+        虚拟机安装centos细节
+      </a></span> <span class="next"><a href="/node/企业化标准的开发环境/centos配置ssh服务.html">
+        企业标准的开发环境搭建
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.7432f3e5.js" defer></script><script src="/assets/js/2.5aced2d4.js" defer></script><script src="/assets/js/51.ae6081da.js" defer></script>
+  </body>
+</html>
