@@ -9,7 +9,7 @@
 module.exports = [
     {
         title: '企业化标准的开发环境搭建',
-        collapsable: false,
+        collapsable: true,
         children: [
             '/node/企业化标准的开发环境/前端工程化',
             '/node/企业化标准的开发环境/虚拟机安装centos细节',
@@ -25,8 +25,15 @@ module.exports = [
         ]
     },
     {
-        title: '基础',
+        title: '深入理解Vue框架知识',
         collapsable: false,
+        children: [
+            
+        ]
+    },
+    {
+        title: '基础',
+        collapsable: true,
         children: [
             
         ]
